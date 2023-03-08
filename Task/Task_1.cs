@@ -5,11 +5,11 @@
 
 Console.Clear();
 string [] array1 = {"ABC", "ABCD", "XYZ", "WXYZ", "123", "12345"};
-Console.WriteLine($"Начальный массив: {string.Join(" ", array1)}");
+string [] array2 = new string [array1.Length];
 
 int LimitCheck = 3;
-string [] array2 = new string [array1.Length];
 int k = 0;
+
 for (int i = 0; i < array1.Length; i++)
 {
     if (array1[i].Length <= LimitCheck)
@@ -18,4 +18,6 @@ for (int i = 0; i < array1.Length; i++)
         k++;
     }
 }
+
+Console.WriteLine($"Начальный массив: {string.Join(" ", array1)}");
 Console.Write($"Конечный массив: {string.Join(" ", array2)}");
